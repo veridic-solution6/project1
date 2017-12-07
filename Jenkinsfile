@@ -3,10 +3,10 @@ properties([
     [$class: 'GithubProjectProperty',
     displayName: '',
     projectUrlStr: 'https://github.com/veridic-solution6/project1.git'],
-    pipelineTriggers([([upstream(
+    pipelineTriggers([upstream(
       threshold: 'SUCCESS',
       upstreamProjects: 'https://github.com/veridic-solution6/project2.git'
-    )])])()])])
+    )])])
 
 pipeline {
     agent any 
